@@ -17,3 +17,5 @@ function Garage() {
 }
 
 createRoot(document.getElementById('root')).render(
+  <Garage />
+);
