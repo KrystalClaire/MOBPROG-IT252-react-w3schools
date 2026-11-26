@@ -1,12 +1,11 @@
 import { createRoot } from 'react-dom/client'
 
-function Fruit() {
-  const x = 5;
+function Car() {
   return (
-    <h1>{(x) < 10 ? "Banana" : "Apple"}</h1>
+    <h2>Hi, I am a Car!</h2>
   );
 }
 
 createRoot(document.getElementById('root')).render(
-  <Fruit />
+  <Car />
 );
