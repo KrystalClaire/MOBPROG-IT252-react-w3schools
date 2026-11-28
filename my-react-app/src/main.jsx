@@ -1,13 +1,17 @@
 import { createRoot } from 'react-dom/client'
 
-function Car(props) {
+function MyCars() {
+  const cars = ['Ford', 'BMW', 'Audi'];
   return (
     <>
-      {props.brand && <h1>My car is a {props.brand}</h1>}
+      <h1>My Cars:</h1>
+      <ul>
+        {cars.map((car) => <li>I am a { car }</li>)}
+      </ul>
     </>
   );
 }
 
 createRoot(document.getElementById('root')).render(
-  <Car brand="Ford" />
+  <MyCars />
 );
