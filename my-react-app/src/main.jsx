@@ -2,10 +2,12 @@ import { createRoot } from 'react-dom/client'
 
 function Car(props) {
   return (
-    <h2>The car is from {props.year}!</h2>
+    <h2>I am a {props.brand}!</h2>
   );
 }
 
+let x = "Ford";
+
 createRoot(document.getElementById('root')).render(
-  <Car year={1969} />
+  <Car brand={x} />
 );
