@@ -1,8 +1,11 @@
 import { createRoot } from 'react-dom/client'
-import Car from './Vehicle.jsx';
+
+function Car(props) {
+  return (
+    <h2>I am a {props.color} {props.brand} {props.model}!</h2>
+  );
+}
 
 createRoot(document.getElementById('root')).render(
-  <Car />
+  <Car brand="Ford" model="Mustang" color="red" />
 );
-
-//Make sure to check out the Vehicle.js file.
