@@ -6,8 +6,8 @@ class Header extends React.Component {
     super(props);
     this.state = {favoritecolor: "red"};
   }
-  static getDerivedStateFromProps(props, state) {
-    return {favoritecolor: props.favcol };
+  shouldComponentUpdate() {
+    return false;
   }
   changeColor = () => {
     this.setState({favoritecolor: "blue"});
@@ -23,5 +23,5 @@ class Header extends React.Component {
 }
 
 createRoot(document.getElementById('root')).render(
-  <Header favcol="yellow" />
+  <Header />
 );
