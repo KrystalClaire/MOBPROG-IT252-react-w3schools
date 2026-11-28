@@ -1,23 +1,30 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
 
 class Car extends React.Component {
-  render() {
-    return <h2>I am a Car!</h2>;
+  constructor(props) {
+    super(props);
+    this.state = {
+      brand: "Ford",
+      model: "Mustang",
+      color: "red",
+      year: 1964
+    };
   }
-}
-
-class Garage extends React.Component {
   render() {
     return (
       <div>
-      <h1>Who lives in my Garage?</h1>
-      <Car />
+        <h1>My {this.state.brand}</h1>
+        <p>
+          It is a {this.state.color}
+          {this.state.model}
+          from {this.state.year}.
+        </p>
       </div>
     );
   }
 }
 
-createRoot(document.getElementById('root')).render(
-  <Garage />
-);
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<Car />);
