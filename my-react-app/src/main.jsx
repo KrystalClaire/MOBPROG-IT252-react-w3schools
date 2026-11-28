@@ -2,15 +2,14 @@ import React from 'react';
 import { createRoot } from 'react-dom/client'
 
 class Car extends React.Component {
-  constructor() {
-    super();
-    this.state = {color: "red"};
+  constructor(props) {
+    super(props);
   }
   render() {
-    return <h2>I am a {this.state.color} Car!</h2>;
+    return <h2>I am a {this.props.model}!</h2>;
   }
 }
 
 createRoot(document.getElementById('root')).render(
-  <Car />
+  <Car model="Mustang"/>
 );
