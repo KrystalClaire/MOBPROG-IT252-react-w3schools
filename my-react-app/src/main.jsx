@@ -1,17 +1,12 @@
 import { createRoot } from 'react-dom/client';
-import styles from './Button.module.css';
+import styles from './BlueHeader.module.css';
 
 function App() {
   return (
     <div>
-      <button className={`${styles.mybutton} ${styles.primary}`}>
-        My Primary Button
-      </button>
-      <br/>
-      <br/>
-      <button className={`${styles.mybutton} ${styles.secondary}`}>
-        My Secondary Button
-      </button>
+      <h1 className="myheader">
+        My Header
+      </h1>
     </div>
   );
 }
